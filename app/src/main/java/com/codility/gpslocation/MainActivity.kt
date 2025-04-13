@@ -131,7 +131,6 @@ class MainActivity : AppCompatActivity() {
             //date = currentDate,
             //time = currentTime
         )
-
         lifecycleScope.launch {
             val dao = AppDatabase.getDatabase(applicationContext).customerDao()
 
