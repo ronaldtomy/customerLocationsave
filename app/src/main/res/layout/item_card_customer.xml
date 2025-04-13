@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allinstitutionsCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="10sp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="9sp"
+    app:cardElevation="@dimen/card_elevation">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/layout_margin_small"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="Name of the customer"
+            android:textColor="#3949AB"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="10dp"
+            android:text=" by:"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="Accredited"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLatLng"
+            android:layout_width="243dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="1dp"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Address"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:fontFamily="@font/poppins"
+                android:paddingLeft="10dp"
+                android:text="district"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="district" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+
+                android:fontFamily="@font/poppins"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text="State"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="@string/state" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autoLink="web"
+                android:fontFamily="@font/poppins"
+                android:inputType="textUri"
+                android:paddingLeft="10dp"
+                android:text="Edit"
+                android:textColorLink="#3949AB"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
