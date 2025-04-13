@@ -17,5 +17,5 @@ data class CustomerEntity(
     val latitude: Double,
     val longitude: Double
     //val date: String,
-   // val time: String
+    //val time: String
 ): Parcelable

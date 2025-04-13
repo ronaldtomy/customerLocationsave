@@ -46,6 +46,16 @@ class DashBoardActivity : AppCompatActivity() {
             }
         }*/
 
+        binding.btnClearAll.setOnClickListener {
+            lifecycleScope.launch {
+                AppDatabase.getDatabase(applicationContext)
+                    .customerDao()
+                    .deleteAllCustomers()
+
+                Toast.makeText(this@DashBoardActivity, "All customers deleted", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         binding.btnExportAndShareExcel.setOnClickListener {
             lifecycleScope.launch {
                 val file = exportCustomersToExcel(applicationContext)
@@ -118,9 +128,9 @@ class DashBoardActivity : AppCompatActivity() {
                 address = it.address,
                 numOfSystems = it.numOfSystems,
                 latitude = it.latitude,
-                longitude = it.longitude
-               // date = it.date,
-               // time = it.time
+                longitude = it.longitude,
+                //date = it.date,
+                //time = it.time
             )
         }
 
@@ -180,8 +190,8 @@ class DashBoardActivity : AppCompatActivity() {
                 address = it.address,
                 numOfSystems = it.numOfSystems,
                 latitude = it.latitude,
-                longitude = it.longitude,
-               // date = it.date,
+                longitude = it.longitude
+                //date = it.date,
                 //time = it.time
             )
         }

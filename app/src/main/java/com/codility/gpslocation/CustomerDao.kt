@@ -21,4 +21,7 @@ interface CustomerDao {
 
     @Query("SELECT * FROM customer_table")
     suspend fun getAllCustomersList(): List<CustomerEntity>
+
+    @Query("DELETE FROM customer_table")
+    suspend fun deleteAllCustomers()
 }

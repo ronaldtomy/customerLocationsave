@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnSaveCustomer.setOnClickListener {
             saveCustomerToDatabase()
         }
+
+
+
+
     }
 
     private fun requestLocationPermission() {
@@ -125,7 +129,7 @@ class MainActivity : AppCompatActivity() {
             latitude = lat,
             longitude = lng,
             //date = currentDate,
-          //  time = currentTime
+            //time = currentTime
         )
 
         lifecycleScope.launch {
